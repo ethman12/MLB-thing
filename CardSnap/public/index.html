@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CardSnap</title>
+</head>
+<body>
+  <h1>CardSnap 📸</h1>
+  <p>Scan your baseball card to estimate its value.</p>
+  <input type="file" accept="image/*" id="fileInput" capture="environment" />
+  <canvas id="canvas" style="display:none;"></canvas>
+  <div id="result">
+    <h2>Detected Card:</h2>
+    <p id="cardInfo">No card scanned yet.</p>
+    <h3>Estimated Prices:</h3>
+    <ul id="priceList">
+      <li>PSA 10: $200</li>
+      <li>PSA 9: $125</li>
+      <li>Raw: $80</li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0/dist/tesseract.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
